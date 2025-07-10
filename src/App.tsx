@@ -6,13 +6,17 @@ import { useDebounce } from "react-use";
 import { getTrendingMovies, updateSearchCount } from "./appwrite";
 import type { Models } from "appwrite";
 
-type Movie = {
+
+
+export type Movie = {
   id: number;
   title: string;
-  overview: string;
+  vote_average: number;
   poster_path: string;
-  // add more fields as needed
+  release_date: string;
+  original_language: string;
 };
+
 
 
 const API_BASE_URL = 'https://api.themoviedb.org/3';
